@@ -369,6 +369,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1593494892}
+    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1593494899}
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
 --- !u!1001 &769799105
 PrefabInstance:
@@ -603,6 +606,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6946711457253923901, guid: 2593340f103cbc1f58ee786b9a2f00c6, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a6da24547d078a01803fb47df6d180f, type: 2}
+    - target: {fileID: 6946711457253923901, guid: 2593340f103cbc1f58ee786b9a2f00c6, type: 3}
       propertyPath: itemData
       value: 
       objectReference: {fileID: 11400000, guid: 1a6da24547d078a01803fb47df6d180f, type: 2}
@@ -824,6 +831,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6946711457253923901, guid: 2593340f103cbc1f58ee786b9a2f00c6, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ec0f2174f7066920960455b00fc2057, type: 2}
+    - target: {fileID: 6946711457253923901, guid: 2593340f103cbc1f58ee786b9a2f00c6, type: 3}
       propertyPath: itemData
       value: 
       objectReference: {fileID: 11400000, guid: 3ec0f2174f7066920960455b00fc2057, type: 2}
@@ -851,6 +862,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerIteraction
   range: 3
   cam: {fileID: 821087184}
+--- !u!114 &1593494899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593494885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557d9c2af8075c89785cdf2639c0f517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  maxCapacity: 100
+  currentVolume: 0
+  itemsInside: []
 --- !u!1001 &8145126543797442870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -903,6 +929,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6946711457253923901, guid: 2593340f103cbc1f58ee786b9a2f00c6, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e0c8202b5d262e9eaed828a295dd0d8, type: 2}
     - target: {fileID: 6946711457253923901, guid: 2593340f103cbc1f58ee786b9a2f00c6, type: 3}
       propertyPath: itemData
       value: 

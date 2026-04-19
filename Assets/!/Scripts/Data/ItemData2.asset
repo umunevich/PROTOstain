@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f752a1c96d5367c75ac7d6bc08aefd55, type: 3}
-  m_Name: ItemData1
+  m_Name: ItemData2
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: 1
-  price: 100
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  itemName: Box2
+  price: 200
+  volume: 60
