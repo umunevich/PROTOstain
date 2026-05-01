@@ -5,7 +5,7 @@ namespace Proto.Scripts.Tank
 {
     using Item;
 
-    public interface ITank<T> where T : IItem
+    public interface ITank<in T> where T : IItem
     {
         float  TotalCost();
         float TotalVolume();
