@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    // Dont destroy on load
     [SerializeField] public float maxCapacity = 100f;
 
     public float currentVolume = 0f;
