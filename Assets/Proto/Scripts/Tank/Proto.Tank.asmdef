@@ -1,0 +1,16 @@
+{
+    "name": "Proto.Tank",
+    "rootNamespace": "",
+    "references": [
+        "GUID:78413ed8411b2c8e9907403b621bec3d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

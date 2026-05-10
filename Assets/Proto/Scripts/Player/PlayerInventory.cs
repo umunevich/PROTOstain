@@ -15,6 +15,6 @@ namespace  Proto.Scripts.Player
         
         }
         
-        private readonly Tank _tank = new Tank();
+        private readonly Tank _tank = new Tank(5);
     }
 }

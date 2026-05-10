@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,7 +10,7 @@ namespace Proto.Scripts.Tank
     {
         float  TotalCost();
         float TotalVolume();
-        void AddItem(T item);
+        bool AddItem(T item);
         void Clear();
     }
 
@@ -20,6 +21,14 @@ namespace Proto.Scripts.Tank
     
     public class Tank : ITank<IItem>, IOffloader<IItem>
     {
+        public Tank(float maxVolume)
+        {
+            if (maxVolume < 0)
+            {
+                throw new ArgumentException("maxVolume must be >= 0");
+            }
+            _maxVolume = maxVolume;
+        }
         public float TotalCost()
         {
             return _items.Sum(item => item.Cost());
@@ -30,12 +39,11 @@ namespace Proto.Scripts.Tank
             return _items.Sum(item => item.Volume());
         }
 
-        public void AddItem(IItem item)
+        public bool AddItem(IItem item)
         {
-            if (ValidateItem(item))
-            {
-                _items.Add(item);
-            }
+            if (!ValidateItem(item)) return false;
+            _items.Add(item);
+            return true;
         }
 
         public List<IItem> Offload()
@@ -48,14 +56,16 @@ namespace Proto.Scripts.Tank
             _items.Clear();
         }
         
-        private static bool ValidateItem(IItem item)
+        private bool ValidateItem(IItem item)
         {
             return item != null &&
                    item.Cost() >= 0 &&
-                   item.Volume() > 0;
+                   item.Volume() > 0 && 
+                   TotalVolume() + item.Volume() <= _maxVolume;
         }
         
         private readonly List<IItem>  _items = new List<IItem>();
+        private readonly float _maxVolume;
     }
 }
 

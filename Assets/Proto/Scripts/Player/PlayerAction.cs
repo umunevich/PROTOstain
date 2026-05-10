@@ -1,8 +1,11 @@
 using System;
+using Proto.Scripts.Item;
 using UnityEngine;
 
 namespace Proto.Scripts.Player
 {
+    using Item;
+    
     public interface IPlayerAction
     {
         void Perform();
@@ -29,9 +32,11 @@ namespace Proto.Scripts.Player
         
             if (Physics.Raycast(ray, out RaycastHit hit, _range))
             {
-                if (hit.collider.TryGetComponent(out ray)) // change!!
+                if (hit.collider.TryGetComponent(out IPickable pickable))
                 {
                     _action();
+                    
+                    pickable.OnPickUp();
                 }
             }
         }

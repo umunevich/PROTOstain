@@ -24,7 +24,7 @@ namespace Proto.Scripts.Player
             {
                 CamTransform =  cam.transform,
                 Range = range,
-                Action = new Action(() =>  Debug.Log("Here")) // change!!
+                Action = new Action(() =>  Debug.Log("Picked up"))
             });
             
             

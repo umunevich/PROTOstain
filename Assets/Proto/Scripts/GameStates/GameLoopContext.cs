@@ -1,3 +1,4 @@
+using Proto.Scripts.Player;
 using UnityEngine;
 
 namespace Proto.Scripts.GameStates
@@ -9,6 +10,20 @@ namespace Proto.Scripts.GameStates
     
     public class GameLoopContext : MonoBehaviour, IGameLoopContext<BaseGameState>
     {
+        public static GameLoopContext Instance => _instance;
+
+        private void Awake()
+        {
+            if (_instance == null)
+            {
+                _instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+        
         private void Start()
         {
             TransitionToState(_explorationGameState);
@@ -21,15 +36,18 @@ namespace Proto.Scripts.GameStates
 
         public void TransitionToState(BaseGameState state)
         {
-            _currentState.ExitState(this);
+            _currentState?.ExitState(this);
             _currentState = state;
             _currentState.EnterState(this);
         }
         
+        private static GameLoopContext _instance;
+        
         private readonly ExplorationGameState _explorationGameState = new ExplorationGameState();
         private readonly LevelCompleteGameState _levelCompleteGameState = new LevelCompleteGameState();
         private readonly ShopGameState _shopGameState = new ShopGameState();
-
         private BaseGameState _currentState;
+        
+        private PlayerData _playerData;
     }
 }

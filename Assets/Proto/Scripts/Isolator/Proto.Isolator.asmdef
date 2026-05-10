@@ -1,0 +1,17 @@
+{
+    "name": "Proto.Isolator",
+    "rootNamespace": "",
+    "references": [
+        "GUID:78413ed8411b2c8e9907403b621bec3d",
+        "GUID:0ea2686e579c64e059606d6fa5253f37"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
